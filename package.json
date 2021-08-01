@@ -1,0 +1,23 @@
+{
+  "name": "test-db",
+  "version": "1.0.0",
+  "description": "Test for a vacancy HTML-coder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HachikoR/test-db.git"
+  },
+  "keywords": [
+    "test",
+    "test-work"
+  ],
+  "author": "Hachiko <DenisZhukov.Hachiko@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HachikoR/test-db/issues"
+  },
+  "homepage": "https://github.com/HachikoR/test-db#readme"
+}
