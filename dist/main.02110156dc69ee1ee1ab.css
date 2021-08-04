@@ -1,12 +1,4 @@
 /*!**************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles/style.scss ***!
   \**************************************************************************************************************/
-.container {
-  padding-top: 2rem;
-  min-width: 1000px;
-  margin: 0 auto; }
-
-h1 {
-  text-align: center;
-  border: 1px solid black; }
 

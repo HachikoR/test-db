@@ -2,12 +2,12 @@ const path = require("path");
 const HTMLWP = require("html-webpack-plugin");
 const { CleanWebpackPlugin: CleanWP } = require("clean-webpack-plugin");
 const MiniCssExtractWP = require("mini-css-extract-plugin");
+const CopyWP = require("copy-webpack-plugin");
 
 module.exports = {
 	context: path.resolve(__dirname, "src"),
 	entry: {
 		main: "./index.js",
-		analytics: "./analytics.js",
 	},
 	output: {
 		filename: "[name].[hash].js",
@@ -32,6 +32,9 @@ module.exports = {
 		new MiniCssExtractWP({
 			filename: "[name].[hash].css",
 		}),
+		new CopyWP({
+			patterns: [{ from: "./assets/logo.svg", to: "./../dist/assets" }],
+		}),
 	],
 	module: {
 		rules: [
@@ -39,7 +42,7 @@ module.exports = {
 				test: /\.css$/,
 				use: [MiniCssExtractWP.loader, "css-loader"],
 			},
-			{ test: /\.(png|jpg|jpeg|svg|gif)$/, use: ["file-loader"] },
+			{ test: /\.(png|jpg|jpeg|gif)$/, use: ["file-loader"] },
 			{ test: /\.(ttf|woff|woff2|eot)$/, use: ["file-loader"] },
 			{
 				test: /\.s[ac]ss$/,
